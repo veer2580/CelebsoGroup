@@ -2,30 +2,10 @@
   RewriteEngine On
   RewriteBase /
 
-  # Prevent rewriting index.html
   RewriteRule ^index\.html$ - [L]
 
-  # If file or folder exists, serve it normally
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
 
-  # Otherwise redirect everything to index.html
   RewriteRule . /index.html [L]
-</IfModule>
-
-# Optional: Force HTTPS (recommended)
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{HTTPS} off
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-</IfModule>
-
-# Optional: Cache static files for performance
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
 </IfModule>
