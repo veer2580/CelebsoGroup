@@ -24,7 +24,7 @@ export default function Index() {
 
   const ventures = [
     {
-      name: "Celebso (Social Network) ",
+      name: "Celebso ",
       description:
         "A next-generation social platform blending the power of professional networking with the reach and engagement of modern content platforms. ",
     },
