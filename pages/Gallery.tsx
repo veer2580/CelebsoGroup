@@ -49,7 +49,7 @@ export default function Gallery() {
       <section className="relative h-[58vh] min-h-[940px] w-full overflow-hidden">
         {/* Background image (change to your banner image) */}
         <img
-          src="/gallery/banner.png"
+          src="/gallery-assets/banner.png"
           alt="Gallery Banner"
           className="absolute inset-0 h-full w-full object-cover"
         />

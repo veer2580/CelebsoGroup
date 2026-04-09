@@ -40,7 +40,7 @@ export default function Index() {
   ];
 
   const ventures = [
-    {
+     {
       name: "PersonaSeek AI",
       description:
         "AI-led products that translate audience insight into smarter business decisions.",
@@ -54,6 +54,7 @@ export default function Index() {
       action: "See platform",
       link: "/ventures#techcelebso",
     },
+   
     {
       name: "Startup Valley",
       description:
@@ -98,20 +99,35 @@ export default function Index() {
     },
   ];
 
-  const connectedVentures = [
-    {
-      name: "PersonaSeek AI",
-      initials: "PS",
-      icon: Cpu,
-      color: "bg-[#EAF5FF]",
-      position: { left: "50%", top: "8%", transform: "translateX(-50%)" },
-    },
+  type ConnectedVenture = {
+    name: string;
+    initials: string;
+    icon: typeof Cpu;
+    color: string;
+    position: {
+      left?: string;
+      right?: string;
+      top?: string;
+      bottom?: string;
+      transform?: string;
+    };
+    logoSrc?: string;
+  };
+
+  const connectedVentures: ConnectedVenture[] = [
     {
       name: "TechCelebso",
       initials: "TC",
       icon: Code2,
       color: "bg-[#FFF0F0]",
       position: { right: "8%", top: "10%" },
+    },
+    {
+      name: "PersonaSeek AI",
+      initials: "PS",
+      icon: Cpu,
+      color: "bg-[#EAF5FF]",
+      position: { left: "50%", top: "8%", transform: "translateX(-50%)" },
     },
     {
       name: "Production",
@@ -287,7 +303,7 @@ export default function Index() {
 
             <div className="absolute left-1/2 top-1/2 w-56 h-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-2xl flex items-center justify-center overflow-hidden border border-slate-200 animate-fade-in">
               <img
-                src="/logo/logo.png"
+                src="/logo/logo1.png"
                 alt="Celebso logo"
                 className="h-full w-full object-contain"
               />

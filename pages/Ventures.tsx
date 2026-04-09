@@ -97,10 +97,10 @@ export default function Ventures() {
                   style={{ animationDelay: `${idx * 100}ms` }}
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-3xl font-serif font-bold text-secondary group-hover:text-primary transition-colors">
+                    <h3 className="text-4xl font-serif font-bold text-secondary group-hover:text-primary transition-colors">
                       {venture.name}
                     </h3>
-                    <ArrowRight className="text-primary opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-2" />
+                    <ArrowRight className="text-primary opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-2" size={24} />
                   </div>
 
                   {venture.subtext && (
@@ -109,7 +109,7 @@ export default function Ventures() {
                     </p>
                   )}
 
-                  <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                  <p className="text-xl text-slate-600 mb-6 leading-relaxed">
                     {venture.description}
                   </p>
 
@@ -138,7 +138,7 @@ export default function Ventures() {
               to="/partnerships"
               className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300"
             >
-              Explore Partnership Opportunities <ArrowRight size={20} />
+              Explore Partnership Opportunities <ArrowRight size={24} />
             </Link>
           </div>
         </div>
