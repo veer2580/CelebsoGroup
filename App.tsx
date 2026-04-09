@@ -13,6 +13,8 @@ import Leadership from "./pages/Leadership";
 import Events from "./pages/Events";
 import Partnerships from "./pages/Partnerships";
 import Contact from "./pages/Contact";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import Gallery from "./pages/Gallery";
 
@@ -36,6 +38,8 @@ export const App = () => (
           <Route path="/events" element={<Events />} />
           <Route path="/partnerships" element={<Partnerships />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="/gallery" element={<Gallery />} />
           <Route path="*" element={<NotFound />} />

@@ -162,15 +162,13 @@ export default function Layout({ children }: LayoutProps) {
                 © 2024 Celebso Group. All rights reserved.
               </p>
               <div className="flex gap-6 text-sm">
-                <a href="#" className="text-slate-400 hover:text-accent transition-colors">
+                <Link to="/privacy" className="text-slate-400 hover:text-accent transition-colors">
                   Privacy
-                </a>
-                <a href="#" className="text-slate-400 hover:text-accent transition-colors">
+                </Link>
+                <Link to="/terms" className="text-slate-400 hover:text-accent transition-colors">
                   Terms
-                </a>
-                <a href="#" className="text-slate-400 hover:text-accent transition-colors">
-                  Careers
-                </a>
+                </Link>
+                
               </div>
             </div>
           </div>
