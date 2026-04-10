@@ -40,42 +40,52 @@ export default function Index() {
   ];
 
   const ventures = [
-     {
-      name: "PersonaSeek AI",
-      description:
-        "AI-led products that translate audience insight into smarter business decisions.",
-      action: "Discover AI",
-      link: "/ventures#persona-seek-ai",
-    },
     {
       name: "TechCelebso",
       description:
-        "Technology solutions designed to elevate creators, operators, and growth teams.",
+        "– A high-tech software company building SaaS, AI, and custom digital solutions for startups and businesses.",
       action: "See platform",
       link: "/ventures#techcelebso",
     },
-   
     {
-      name: "Startup Valley",
+      name: "CelebsoX",
       description:
-        "A launch ecosystem helping ambitious founders find momentum, capital, and community.",
-      action: "View network",
-      link: "/ventures#startup-valley",
+        " A digital innovation platform focused on next-generation social networking and creator economy tools.",
+      action: "See platform",
+      link: "/ventures#techcelebso",
     },
     {
-      name: "Production",
+      name: "Celebso Ventures",
       description:
-        "Premium content, campaigns, and storytelling built for modern consumer attention.",
+        "  A startup investment and growth support arm helping early-stage companies scale and raise funding. ",
+      action: "See platform",
+      link: "/ventures#techcelebso",
+    },
+      {
+      name: " Celebso Production",
+      description:
+        " A media and production house creating content, branding films, and digital storytelling for modern brands.",
       action: "Explore studio",
       link: "/ventures#production",
     },
     {
-      name: "Startup School",
+      name: "PersonaSeek AI",
       description:
-        "Execution-first learning programs for founders building with urgency and clarity.",
-      action: "Browse programs",
-      link: "/ventures#startup-school",
+        " An AI-powered intelligence platform for smart profile discovery, networking, and opportunity matching. ",
+      action: "Discover AI",
+      link: "/ventures#persona-seek-ai",
     },
+     
+
+    {
+      name: "Startup Valley",
+      description:
+        " A physical startup ecosystem where founders connect, collaborate, and build real ventures together.",
+      action: "View network",
+      link: "/ventures#startup-valley",
+    },
+  
+  
     {
       name: "Business School",
       description:
@@ -115,18 +125,20 @@ export default function Index() {
   };
 
   const connectedVentures: ConnectedVenture[] = [
+   
+  
+    {
+      name: "Celebso Ventures",
+      initials: "CV",
+      icon: Rocket,
+      color: "bg-[#FFE5E5]",
+      position: { left: "8%", top: "10%" },
+    },
     {
       name: "TechCelebso",
       initials: "TC",
       icon: Code2,
       color: "bg-[#FFF0F0]",
-      position: { right: "8%", top: "10%" },
-    },
-    {
-      name: "PersonaSeek AI",
-      initials: "PS",
-      icon: Cpu,
-      color: "bg-[#EAF5FF]",
       position: { left: "50%", top: "8%", transform: "translateX(-50%)" },
     },
     {
@@ -134,42 +146,42 @@ export default function Index() {
       initials: "PR",
       icon: Camera,
       color: "bg-[#F7F7FF]",
-      position: { left: "8%", top: "10%" },
+      position: { right: "8%", top: "10%" },
     },
     {
-      name: "Startup Valley",
-      initials: "SV",
-      icon: Users,
-      color: "bg-[#F0FFEF]",
-      position: { right: "8%", top: "50%", transform: "translateY(-50%)" },
+      name: "PersonaSeek AI",
+      initials: "PS",
+      icon: Cpu,
+      color: "bg-[#EAF5FF]",
+      position: { left: "8%", bottom: "10%" },
+    },
+    {
+      name: "CelebsoX",
+      initials: "CX",
+      icon: Network,
+      color: "bg-[#F5E6FF]",
+      position: { left: "8%", top: "50%", transform: "translateY(-50%)" },
     },
     {
       name: "Numerixx",
       initials: "NX",
       icon: BarChart3,
       color: "bg-[#FFF4E5]",
-      position: { left: "8%", top: "50%", transform: "translateY(-50%)" },
+      position: { right: "8%", top: "50%", transform: "translateY(-50%)" },
     },
     {
-      name: "Startup School",
-      initials: "SS",
-      icon: GraduationCap,
-      color: "bg-[#F4F3FF]",
+      name: "Startup Valley",
+      initials: "SV",
+      icon: Users,
+      color: "bg-[#F0FFEF]",
       position: { right: "8%", bottom: "10%" },
-    },
-    {
-      name: "Space Rentiya",
-      initials: "SR",
-      icon: Home,
-      color: "bg-[#EFF9FF]",
-      position: { left: "50%", bottom: "8%", transform: "translateX(-50%)" },
     },
     {
       name: "Business School",
       initials: "BS",
       icon: BookOpen,
       color: "bg-[#FFF7F0]",
-      position: { left: "8%", bottom: "10%" },
+      position: { left: "50%", bottom: "8%", transform: "translateX(-50%)" },
     },
   ];
 
@@ -255,6 +267,49 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Industries Section */}
+      <section className="section-padding bg-white">
+        <div className="container-max">
+          <div className="rounded-[2.5rem] bg-slate-50 border border-slate-200 p-10 shadow-sm animate-fade-in">
+            <div className="max-w-3xl">
+              <p className="text-xs uppercase tracking-[0.4em] text-primary mb-4">
+                Industries
+              </p>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-secondary mb-6">
+                Where the Celebso ecosystem creates leverage
+              </h2>
+              <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
+                Celebso is positioned to connect communities and capital across
+                high-attention sectors with long-term demand and modern brand
+                potential.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+              {industries.map((industry, idx) => {
+                const Icon = industry.icon;
+                return (
+                  <div
+                    key={industry.label}
+                    className="group animate-fade-in flex items-center gap-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    style={{
+                      animationDelay: `${idx * 80}ms`,
+                    }}
+                  >
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                      <Icon className="h-7 w-7" />
+                    </div>
+                    <p className="text-base font-semibold text-slate-900">
+                      {industry.label}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Connected Ventures Section */}
       <section className="section-padding bg-slate-50">
         <div className="container-max animate-fade-in">
@@ -266,7 +321,9 @@ export default function Index() {
               A unified ecosystem designed around one brand center
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Celebso sits at the center of interconnected ventures, turning audience energy into products, learning, services, and high-value opportunities.
+              Celebso sits at the center of interconnected ventures, turning
+              audience energy into products, learning, services, and high-value
+              opportunities.
             </p>
           </div>
 
@@ -279,7 +336,9 @@ export default function Index() {
                     key={venture.name}
                     className="rounded-3xl bg-white p-6 shadow-sm border border-slate-200 flex items-center gap-4 animate-fade-in"
                   >
-                    <div className={`flex h-14 w-14 items-center justify-center rounded-2xl ${venture.color}`}>
+                    <div
+                      className={`flex h-14 w-14 items-center justify-center rounded-2xl ${venture.color}`}
+                    >
                       {Icon ? (
                         <Icon className="h-7 w-7 text-slate-700" />
                       ) : (
@@ -288,7 +347,9 @@ export default function Index() {
                         </span>
                       )}
                     </div>
-                    <p className="font-semibold text-slate-900">{venture.name}</p>
+                    <p className="font-semibold text-slate-900">
+                      {venture.name}
+                    </p>
                   </div>
                 );
               })}
@@ -301,7 +362,7 @@ export default function Index() {
               <div className="absolute top-1/2 left-0 w-full h-px bg-slate-200/60 -translate-y-1/2" />
             </div>
 
-            <div className="absolute left-1/2 top-1/2 w-56 h-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-2xl flex items-center justify-center overflow-hidden border border-slate-200 animate-fade-in">
+            <div className="absolute left-1/2 top-1/2 w-44 h-44 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-2xl flex items-center justify-center overflow-hidden border border-slate-200 animate-fade-in">
               <img
                 src="/logo/logo1.png"
                 alt="Celebso logo"
@@ -333,7 +394,9 @@ export default function Index() {
                         />
                       </div>
                     ) : (
-                      <div className={`flex h-12 w-12 items-center justify-center rounded-2xl ${venture.color}`}>
+                      <div
+                        className={`flex h-12 w-12 items-center justify-center rounded-2xl ${venture.color}`}
+                      >
                         {Icon ? (
                           <Icon className="h-6 w-6 text-slate-700" />
                         ) : (
@@ -373,14 +436,16 @@ export default function Index() {
                 Our Vision & Mission
               </h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                To create a global powerhouse ecosystem originating from India — integrating social 
-networking, technology, AI, startups, and the entertainment industry — where ambition 
-transforms into influence, and ideas scale into impactful businesses. 
+                To create a global powerhouse ecosystem originating from India —
+                integrating social networking, technology, AI, startups, and the
+                entertainment industry — where ambition transforms into
+                influence, and ideas scale into impactful businesses.
               </p>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-               To bridge the gap between ideas, execution, and visibility by combining technology, AI, media, 
-and strategic networks — helping startups scale faster, creators build powerful brands, and 
-investors discover high-potential opportunities.
+                To bridge the gap between ideas, execution, and visibility by
+                combining technology, AI, media, and strategic networks —
+                helping startups scale faster, creators build powerful brands,
+                and investors discover high-potential opportunities.
               </p>
               <Link
                 to="/partnerships"
@@ -404,7 +469,9 @@ investors discover high-potential opportunities.
               Eight focused ventures under one premium growth umbrella
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Each brand extends the Celebso ecosystem into a specific market while compounding reach, trust, and commercial upside across the group.
+              Each brand extends the Celebso ecosystem into a specific market
+              while compounding reach, trust, and commercial upside across the
+              group.
             </p>
           </div>
 
@@ -435,47 +502,6 @@ investors discover high-potential opportunities.
         </div>
       </section>
 
-      {/* Industries Section */}
-      <section className="section-padding bg-white">
-        <div className="container-max">
-          <div className="rounded-[2.5rem] bg-slate-50 border border-slate-200 p-10 shadow-sm animate-fade-in">
-            <div className="max-w-3xl">
-              <p className="text-xs uppercase tracking-[0.4em] text-primary mb-4">
-                Industries
-              </p>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-secondary mb-6">
-                Where the Celebso ecosystem creates leverage
-              </h2>
-              <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
-                Celebso is positioned to connect communities and capital across high-attention sectors with long-term demand and modern brand potential.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-              {industries.map((industry, idx) => {
-                const Icon = industry.icon;
-                return (
-                  <div
-                    key={industry.label}
-                    className="group animate-fade-in flex items-center gap-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-                    style={{
-                      animationDelay: `${idx * 80}ms`,
-                    }}
-                  >
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                      <Icon className="h-7 w-7" />
-                    </div>
-                    <p className="text-base font-semibold text-slate-900">
-                      {industry.label}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Founder Message */}
       <section className="section-padding bg-secondary text-white">
         <div className="container-max">
@@ -493,8 +519,8 @@ investors discover high-potential opportunities.
             {/* RIGHT TEXT */}
             <div>
               <blockquote className="text-2xl md:text-3xl font-serif italic text-white mb-6">
-             " Celebso is not a company. It’s a movement shaping the future of startups, creators, and the 
-entertainment industry. "   
+                " Celebso is not a company. It’s a movement shaping the future
+                of startups, creators, and the entertainment industry. "
               </blockquote>
 
               <p className="text-lg font-semibold text-accent">
