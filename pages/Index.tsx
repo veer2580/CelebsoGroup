@@ -20,6 +20,8 @@ import {
   GraduationCap,
   Camera,
 } from "lucide-react";
+import { PartnersLogos10 } from "./PartnersLogos10";
+import { InfiniteNews } from "./InfiniteNews";
 
 export default function Index() {
   const [scrollY, setScrollY] = useState(0);
@@ -266,7 +268,8 @@ export default function Index() {
           </div>
         </div>
       </section>
-
+{/* our trusted partners */}
+      <PartnersLogos10/>
       {/* Industries Section */}
       <section className="section-padding bg-white">
         <div className="container-max">
@@ -501,6 +504,7 @@ export default function Index() {
           </div>
         </div>
       </section>
+      
 
       {/* Founder Message */}
       <section className="section-padding bg-secondary text-white">
@@ -604,7 +608,8 @@ export default function Index() {
           </div>
         </div>
       </section>
-
+      {/* {NewsLoop} */}
+<InfiniteNews/>
       {/* CTA Section */}
       <section
         className="section-padding relative overflow-hidden"

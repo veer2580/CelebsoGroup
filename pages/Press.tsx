@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import heroImage from "@/assets/hero/press.png";
 import { Download, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { InfiniteNews } from "./InfiniteNews";
 
 export default function Press() {
   const pressReleases = [
@@ -140,6 +141,7 @@ export default function Press() {
           </p>
         </div>
       </section>
+      <InfiniteNews/>
 
       {/* CTA */}
       <section className="section-padding bg-secondary text-white">
