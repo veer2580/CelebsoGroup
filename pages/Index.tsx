@@ -250,8 +250,11 @@ export default function Index() {
           <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl mx-auto">
             Celebso Group is a premium innovation company operating across
             technology, social networking, fashion, AI, branding, and real
-            estate ecosystems.
+            estate ecosystems.  <h1 className="text-5xl">“Website under maintenance due to pending updates”
+
+(Not “payment not received”</h1>
           </p>
+        
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <Link
               to="/ventures"
